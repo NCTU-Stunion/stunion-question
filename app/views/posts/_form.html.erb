@@ -1,0 +1,23 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.label "姓名" %>
+  <%= f.input :name, label: false %>
+  <%= tag(:br) %>
+  <%= f.label "性別" %>
+  <%= f.input :gender, label: false, as: :radio_buttons, :collection => [[1, '男'], [2, '女'], [0, '其他']], :label_method => :last, :value_method => :first %>
+  <%= tag(:br) %>
+  <%= f.label "學系" %>
+  <%= f.input :depart, label: false %>
+  <%= tag(:br) %>
+  <%= f.label "信箱" %>
+  <%= f.input :email, label: false %>
+  <%= tag(:br) %>
+  <%= f.label "標題" %>
+  <%= f.input :title, label: false %>
+  <%= tag(:br) %>
+  <%= f.label "問題" %>
+  <%= f.input :question, label: false %>
+  <%= tag(:br) %>
+  <%= f.label "是否願意以公開的形式回覆問題？（無論是否，我們都將保證您的名字不會出現在問答中）" %>
+  <%= f.input :public, label: false, as: :radio_buttons, :collection => [[true, '是的，我願意公開我的問題！'], [false, '否，我不願意公開我的問題！']], :label_method => :last, :value_method => :first %>
+  <%= f.submit  %>
+<% end %>

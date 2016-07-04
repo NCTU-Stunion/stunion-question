@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StunionQuestion</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="main_content">
+    <%= render 'common/navbar' %>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= bootstrap_class_for key %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= simple_format value %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
+</html>

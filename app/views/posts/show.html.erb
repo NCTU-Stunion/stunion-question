@@ -1,0 +1,13 @@
+<h2><%= @post.title %></h2>
+<%= "學系 : #{@post.depart} | 姓名 : #{@post.name} | 性別 : #{display_gender @post} | 信箱 : #{@post.email}" %>
+<br></br>
+<strong><%= display_public @post %></strong> 公開問題
+<br></br>
+<%= simple_format @post.question %>
+<%= "Submitted #{time_ago_in_words @post.updated_at} | "%>
+<%= link_to "Delete", post_path(@post), :method => :delete %>
+<h2><%= @post.comments_count %> Answer</h2>
+<%= render :partial => 'comments/show' %>
+<h2>回覆</h2>
+<%= render :partial => 'comments/form' %>
+

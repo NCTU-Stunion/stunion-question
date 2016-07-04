@@ -1,0 +1,13 @@
+<div id="header">
+  <div class="Name">
+    <p>新生提問系統</p>
+  </div>
+  <div class="buttons">
+    <% if admin_signed_in? %>
+      <%= link_to "All Post", posts_path, :class => "btn btn-primary" %>
+      <%= link_to "Log Out", destroy_admin_session_path, :method => :delete, :class => "btn btn-primary" %>
+    <% else %>
+      <%= link_to "Sign In", new_admin_session_path, :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
