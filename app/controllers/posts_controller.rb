@@ -45,15 +45,15 @@ class PostsController < ApplicationController
 
   def success_msg(post)
     if post.public
-      pub = "會"
+      pub = "您願意公開您的問題！"
     else
-      pub = "不會"
+      pub = "我們將不會公開您的問題！"
     end
     "#{post.depart} | #{post.name} 同學您好 您的問題已經送出！
     標題： #{post.title}
     信箱： #{post.email}
     內容： #{post.question}
-    我們將#{pub}公開您的問題！
+    #{pub}
 
     學聯會會儘快回復您的問題！
     謝謝您使用此提問系統！
