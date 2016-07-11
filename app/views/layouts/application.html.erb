@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StunionQuestion</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>新生提問系統 | 交大學聯會</title>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="assets/style.scss" />
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="main_content">
+  <div id="main_content" class="container">
     <%= render 'common/navbar' %>
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= bootstrap_class_for key %> alert-dismissable">
@@ -15,7 +15,14 @@
         <%= simple_format value %>
       </div>
     <% end %>
+
     <%= yield %>
+
   </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js'></script>
+    <script src='http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js'></script>
+    <script src="assets/step.js"></script>
 </body>
 </html>
