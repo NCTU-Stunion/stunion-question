@@ -2,23 +2,48 @@
 <html>
 <head>
   <title>新生提問系統 | 交大學聯會</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NCTU 新生提問系統">
+  <meta name="keywords" content="交大新生提問系統,新生提問系統,交大新生提問,NCTU新生提問系統,新生提問,交大新生,NCTU新生,交大學聯會,NCTU,交大,新生">
+  <meta name="author" content="交通大學學聯會資訊部">
+  <meta name="robots" content="index,follow">
+  <%= csrf_meta_tags %>
+  <meta property = "og:site_name" content="交通大學新生提問系統">
+  <meta property = "og:image" content = "assets/logo.png">
+  <meta property = "og:url" content="https://stunion.nctu.edu.tw/blog/">
+  <meta property = "og:type" content="website">
+  <meta property = "og:description" content="交大學聯會的新生提問系統，新生有疑問？來新生提問系統就對了">
+  <meta property = "og:title" content="交大新生提問系統">
+  <link rel="shortcut icon" href="assets/logo.png">
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link rel="stylesheet" href="assets/style.scss" />
-  <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul class="navbar">
+      <li>新生提問系統</li>
+    </ul>
+  </nav>
   <div id="main_content" class="container">
-    <%= render 'common/navbar' %>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= bootstrap_class_for key %> alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <%= simple_format value %>
-      </div>
-    <% end %>
-
     <%= yield %>
-
   </div>
+  <footer>
+    <div class="footer-custom">
+      <div class="row">
+        <div class="col-xs-4 column">
+          <p><a href="https://www.facebook.com/NctuStUnion" target="_blank">FB粉專</a></p>
+        </div>
+        <div class="col-xs-4 column">
+          <p><a href="https://stunion.nctu.edu.tw/blog/" target="_blank">學聯會會網</a></p>
+        </div>
+        <div class="col-xs-4 column">
+          <p><a href="#" target="_blank">網路新生包</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js'></script>

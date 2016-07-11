@@ -1,8 +1,40 @@
+@import 'variables';
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  .navbar {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    margin: 0 auto ;
+    padding: 0;
+    
+    > li {
+      display: inline-block;
+      color: #ffffff;
+      margin-top:10px;
+      font-size:1.5em;
+    }
+  }
+}
 .step-process{
 	display:table;
 	width:100%;
 	position:relative;
-	margin-top: 40px;
+	margin-top: 120px;
 	p{
 		margin-top:10px;
 	}
@@ -29,6 +61,11 @@
   		opacity: 1 !important;
   		filter: alpha(opacity=100) !important;
   	}
+    .btn-primary{
+      color: #fff;
+      background-color: #0c7d82;
+      border-color: #11999E;
+    }
 }
 .btn-circle{
   	width: 30px;
@@ -39,17 +76,57 @@
   	line-height: 1.428571429;
   	border-radius: 15px;
 }
+footer{
+  bottom:0;
+  left:0;
+  display:block;
+  position:absolute;
+  top:auto;
+  width:100%;
+  div.footer-custom{
+    background:$footer-color;
+    height:100px;
+    .column{
+      text-align:center;
+      p{
+        padding:40px 0 0 0;
+        font-size:1.3em;
+        a{
+          color:#353535;
+          &:hover{
+            text-decoration: none;
+            color: #0c7d82;
+          }
+        }
+      }
+    }
+  }
+}
 
+@media screen and (max-height: 667px) {
+  footer{
+    display:none;
+  }
+}
+.btn-custom{
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #f5f7f9;
+  border-radius: 15px;
+}
+.input-custom{ 
+  input.tooltipstered{
+    background:transparent;
+    color:#fff;
+    border-radius:15px;
+    border: 2px solid #f5f7f9;
+    box-shadow: none;
+  }
+}
 /*
  *
  * TOOLTIPTSTER DEFAULT CSS
  */
-.tooltipster-default {
-  border-radius: 5px;
-  border: 2px solid #000;
-  background: #4c4c4c;
-  color: #fff;
-}
 
 .tooltipster-default .tooltipster-content {
   font-family: Arial,sans-serif;
