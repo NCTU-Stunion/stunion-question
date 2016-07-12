@@ -1,5 +1,8 @@
-<% @comments.each do |c| %>
-  <strong>Answered by : <%= c.admin.email %></strong>
-  <%= simple_format c.answer %>
-  <p><%= time_ago_in_words c.updated_at %></p>
-<% end %>
+<div class="wrapping">
+	<% @comments.each do |c| %>
+	  	<strong>Answered by : <%= c.admin.email %></strong>
+	  	<%= simple_format c.answer %>
+	  	<p><%= time_ago_in_words c.updated_at %></p>
+	<% end %>	
+</div>
+

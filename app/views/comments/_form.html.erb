@@ -1,11 +1,13 @@
-<%= simple_form_for [@post, @comment] do |f| %>
-  <p>
-  標題：<%= simple_format @post.email_subject %>
-  </p>
-  <br>
-  內容：
-  <%= simple_format @post.email_greeting %>
-  <%= f.input :answer, label: false %>
-  <%= simple_format @post.email_closing %>
-  <%= f.submit %>
-<% end %>
+<div class="wrapping">
+	<%= simple_form_for [@post, @comment] do |f| %>
+	  <p>
+	  標題：<%= simple_format @post.email_subject %>
+	  </p>
+	  <br>
+	  內容：
+	  <%= simple_format @post.email_greeting %>
+	  <%= f.input :answer, label: false %>
+	  <%= simple_format @post.email_closing %>
+	  <%= f.submit %>
+	<% end %>
+</div>
