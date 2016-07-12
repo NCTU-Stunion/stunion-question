@@ -1,4 +1,6 @@
 @import 'variables';
+@import "font-awesome";
+
 html, body {
   margin: 0;
   height: 100%;
@@ -87,11 +89,19 @@ footer{
   div.footer-custom{
     background:$footer-color;
     height:100px;
+    .row p.credits{
+      color:#afb1b3;
+      text-align:left;
+      margin-left: 20px;
+    }
     .column{
       text-align:center;
       p{
-        padding:40px 0 0 0;
+        padding:30px 0 0 0;
         font-size:1.3em;
+        i{
+          margin:2px 4px 2px 2px;
+        }
         a{
           color:#353535;
           &:hover{
@@ -99,6 +109,9 @@ footer{
             color: #0c7d82;
           }
         }
+      }
+      .newcomer{
+        margin-top:10px;
       }
     }
   }
