@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
     if @post.save
       flash[:success] = success_msg(@post)
-      redirect_to :new #if root_path then after posting the question, it will be routed back to stunion.edu.tw instead of stunion.edu.tw/questions
+      render :new #if root_path then after posting the question, it will be routed back to stunion.edu.tw instead of stunion.edu.tw/questions
     else
       flash[:error] = "請修改問題格式！\n（各格皆為必填，問題需大於10個字！）"
       render :new
