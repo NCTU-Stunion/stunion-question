@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :name, :depart, :email, :title, :question
   validates_inclusion_of :gender, :in => [0, 1, 2]
   validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  validates_length_of :question, :minimum => 10
+  validates_length_of :question, :minimum => 5
 
   def email_subject
     "#{self.name} 同學您好！回覆您的問題『#{self.title}』"
