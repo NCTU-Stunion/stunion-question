@@ -2,4 +2,10 @@
   <ul class="navbar">
     <li>新生提問系統</li>
   </ul>
+  <% if admin_signed_in? %>
+    <%= link_to "到問題列表",posts_path, :class =>"btn btn-custom" %>	
+    <%= link_to "登出", destroy_admin_session_path, :class => "btn btn-custom", :method => :delete %>
+  <% else %>
+    <%= link_to "登入", new_admin_session_path, :class => "btn btn-custom" %>
+  <% end %>
 </nav>
