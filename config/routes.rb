@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins, :skip => [:registrations, :password]
   root 'posts#new'
+  get '/form' => 'posts#new'
   resources :posts do
     resources :comments
   end
