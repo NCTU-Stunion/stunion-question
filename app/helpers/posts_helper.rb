@@ -1,6 +1,6 @@
 module PostsHelper
   def answered(p)
-    "Answered" if p.comments_count > 0
+    "已經回答過了" if p.comments_count > 0
   end
 
   def display_gender(p)

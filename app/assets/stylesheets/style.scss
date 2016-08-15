@@ -54,7 +54,7 @@ li.center-piece{
       display:block;
       height:240px;
     }
-  }  
+  }
 }
 @media screen and (min-width:980px){
     #main_content{
@@ -65,7 +65,7 @@ li.center-piece{
       display:block;
       height:80px;
     }
-  }  
+  }
 }
 .step-process{
 	display:table;
@@ -185,7 +185,7 @@ footer{
     }
   }
 }
-.input-custom{ 
+.input-custom{
   input.tooltipstered{
     background:transparent;
     color:#fff;
@@ -213,7 +213,11 @@ footer{
  *
  * TOOLTIPTSTER DEFAULT CSS
  */
-
+.question-answered{
+  a{
+    color:#3a4750;
+  }
+}
 .tooltipster-default .tooltipster-content {
   font-family: Arial,sans-serif;
   font-size: 14px;

@@ -2,9 +2,14 @@
 	<hr>
 	<% @posts.reverse.each do |p| %>
 	<div class="post_wrapper">
-	  <h2 class="title"><%= link_to p.title, post_path(p.id) %></h2>
-	  <p class="date"><%= p.created_at.strftime "%b %d, %Y" %></p>
-	  <%= answered p %>
+		<% if p.comments_count > 0 %>
+	  <h2 class="title question-answered" ><%= link_to p.title, post_path(p.id) %></h2>
+		<% else %>
+			  <h2 class="title" style="color:red;"><%= link_to p.title, post_path(p.id) %></h2>
+		<% end %>
+		<p class="date"><%= p.created_at.strftime "%b %d, %Y" %></p>
+	  <h4><%= answered p %></h4>
+		<hr>
 	</div>
 	<% end %>
 </div>
